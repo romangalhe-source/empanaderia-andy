@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Empanadería de Andy · Empanadas dulces caseras</title>
+  <meta name="description" content="Empanadas dulces caseras. Caja con 15 empanadas por $130. Entrega gratis a domicilio los sábados.">
+  <link rel="icon" href="logo.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Empanada reutilizable: el relleno toma el color de --fill -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="dough" cx="40%" cy="30%" r="80%">
+        <stop offset="0" stop-color="#fff1b8"/><stop offset=".6" stop-color="#f7d27e"/><stop offset="1" stop-color="#e9b25e"/>
+      </radialGradient>
+      <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#c2654a"/><stop offset="1" stop-color="#9e4433"/>
+      </linearGradient>
+    </defs>
+    <!-- Empanada al estilo del logo; las mejillas toman el color del sabor (--fill) -->
+    <symbol id="empanada" viewBox="0 0 120 92">
+      <ellipse cx="60" cy="88" rx="48" ry="4" fill="#6b3a2a" opacity=".15"/>
+      <g fill="url(#crust)">
+        <path d="M6 78 A54 62 0 0 1 114 78 Q114 84 108 84 L12 84 Q6 84 6 78 Z"/>
+        <circle cx="114" cy="78" r="8"/><circle cx="112.2" cy="61.9" r="8"/><circle cx="106.8" cy="47" r="8"/>
+        <circle cx="98.2" cy="34.2" r="8"/><circle cx="87" cy="24.3" r="8"/><circle cx="74" cy="18.1" r="8"/>
+        <circle cx="60" cy="16" r="8"/><circle cx="46" cy="18.1" r="8"/><circle cx="33" cy="24.3" r="8"/>
+        <circle cx="21.8" cy="34.2" r="8"/><circle cx="13.2" cy="47" r="8"/><circle cx="7.8" cy="61.9" r="8"/><circle cx="6" cy="78" r="8"/>
+      </g>
+      <path d="M16 80 A44 52 0 0 1 104 80 Q104 87 96 87 L24 87 Q16 87 16 80 Z" fill="url(#dough)"/>
+      <ellipse cx="44" cy="42" rx="12" ry="6" fill="#fff" opacity=".35" transform="rotate(-25 44 42)"/>
+      <circle cx="48" cy="56" r="3.6" fill="#8a3b2b"/><circle cx="72" cy="56" r="3.6" fill="#8a3b2b"/>
+      <ellipse cx="40" cy="66" rx="5" ry="3" fill="var(--fill, #f2a08a)" opacity=".75"/>
+      <ellipse cx="80" cy="66" rx="5" ry="3" fill="var(--fill, #f2a08a)" opacity=".75"/>
+      <path d="M51 66 Q60 74 69 66" fill="none" stroke="#8a3b2b" stroke-width="3.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="leaf" viewBox="0 0 40 40">
+      <path d="M20 2 L24 14 L36 10 L28 20 L38 28 L24 26 L20 38 L16 26 L2 28 L12 20 L4 10 L16 14 Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="La Empanadería de Andy, inicio">
+      <img class="logo" src="logo.jpeg" alt="">
+      <span class="brand-name">La Empanadería <small>de</small> Andy</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#menu">Menú</a>
+      <a href="#sabores">Sabores</a>
+      <a href="#pedido" class="btn btn-small">Haz tu pedido</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="leaves" aria-hidden="true">
+        <svg class="lf l1"><use href="#leaf"/></svg><svg class="lf l2"><use href="#leaf"/></svg>
+        <svg class="lf l3"><use href="#leaf"/></svg><svg class="lf l4"><use href="#leaf"/></svg>
+        <svg class="lf l5"><use href="#leaf"/></svg><svg class="lf l6"><use href="#leaf"/></svg>
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow">Postre mexicano hecho en casa</p>
+        <h1>Pedido de <span>Empanadas</span></h1>
+        <p class="lead">Empanadas dulces recién horneadas, rellenas de los sabores de siempre. Arma tu caja de 15 y te la llevamos a tu casa.</p>
+        <div class="hero-cta">
+          <a href="#pedido" class="btn">Ordenar ahora</a>
+          <a href="#menu" class="btn btn-ghost">Ver menú</a>
+        </div>
+        <ul class="badges">
+          <li>🚚 Entrega <strong>gratis</strong> a domicilio</li>
+          <li>📅 Entregamos los <strong>sábados</strong></li>
+          <li>⏰ Pedidos hasta el <strong>viernes 12:00 pm</strong></li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="plate">
+          <svg class="emp e1" style="--fill:#f4c430"><use href="#empanada"/></svg>
+          <svg class="emp e2" style="--fill:#c0392b"><use href="#empanada"/></svg>
+          <svg class="emp e3" style="--fill:#a0522d"><use href="#empanada"/></svg>
+        </div>
+        <div class="price-tag"><span>Caja c/15</span><strong>$130</strong></div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <h2>Menú</h2>
+      <p class="section-sub">Todas nuestras cajas traen <strong>15 empanadas</strong> y cuestan lo mismo. Elige harina normal o integral.</p>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-icon" aria-hidden="true"><svg style="--fill:#f4c430"><use href="#empanada"/></svg></div>
+          <h3>Un solo sabor</h3>
+          <p>Las 15 empanadas de tu sabor favorito.</p>
+          <p class="price">$130 <small>/ caja</small></p>
+        </article>
+        <article class="menu-card featured">
+          <div class="menu-icon" aria-hidden="true">
+            <svg style="--fill:#c0392b"><use href="#empanada"/></svg><svg style="--fill:#e8a33d"><use href="#empanada"/></svg>
+          </div>
+          <h3>Mix</h3>
+          <p>Caja surtida con todos nuestros sabores. ¡Ideal para probar de todo!</p>
+          <p class="price">$130 <small>/ caja</small></p>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon" aria-hidden="true"><svg style="--fill:#6b2d5c"><use href="#empanada"/></svg></div>
+          <h3>Arma tu caja</h3>
+          <p>Tú decides cuántas de cada sabor hasta completar las 15.</p>
+          <p class="price">$130 <small>/ caja</small></p>
+        </article>
+      </div>
+      <p class="flour-note">🌾 Disponible en <strong>harina normal</strong> o <strong>harina integral</strong>, sin costo extra.</p>
+    </section>
+
+    <section id="sabores" class="section section-alt">
+      <h2>Nuestros sabores</h2>
+      <p class="section-sub">Rellenos caseros, como los de la abuela.</p>
+      <div class="flavor-grid" id="flavor-grid"></div>
+    </section>
+
+    <section id="pedido" class="section">
+      <h2>Haz tu pedido</h2>
+      <p class="section-sub">Recibimos pedidos toda la semana hasta el <strong>viernes a las 12:00 pm</strong>.
+        Tu pedido se entrega el <strong id="delivery-date">próximo sábado</strong>.</p>
+
+      <div class="order-layout">
+        <form id="box-form" class="card" novalidate>
+          <h3>1. Arma una caja</h3>
+          <fieldset>
+            <legend>Tipo de caja</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="type" value="single" checked><span>Un solo sabor</span></label>
+              <label class="choice"><input type="radio" name="type" value="mix"><span>Mix</span></label>
+              <label class="choice"><input type="radio" name="type" value="custom"><span>Arma tu caja</span></label>
+            </div>
+          </fieldset>
+
+          <div data-panel="single">
+            <label for="single-flavor">Sabor</label>
+            <select id="single-flavor"></select>
+          </div>
+          <p data-panel="mix" hidden class="hint">Te enviamos una caja surtida con todos nuestros sabores.</p>
+          <div data-panel="custom" hidden>
+            <p class="hint">Elige cuántas de cada sabor: <strong><span id="custom-count">0</span>/15</strong></p>
+            <div class="meter" aria-hidden="true"><div id="custom-meter"></div></div>
+            <div id="custom-list" class="stepper-list"></div>
+          </div>
+
+          <fieldset>
+            <legend>Harina</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="flour" value="Normal" checked><span>Normal</span></label>
+              <label class="choice"><input type="radio" name="flour" value="Integral"><span>Integral</span></label>
+            </div>
+          </fieldset>
+
+          <label for="qty">¿Cuántas cajas así?</label>
+          <div class="qty-row">
+            <button type="button" class="step" data-qty="-1" aria-label="Una caja menos">−</button>
+            <input id="qty" type="number" min="1" max="20" value="1" inputmode="numeric">
+            <button type="button" class="step" data-qty="1" aria-label="Una caja más">+</button>
+          </div>
+
+          <p class="error" id="box-error" role="alert"></p>
+          <button type="submit" class="btn btn-block">Agregar al pedido</button>
+        </form>
+
+        <form id="order-form" class="card" novalidate>
+          <h3>2. Tu pedido</h3>
+          <ul id="cart" class="cart"><li class="empty">Aún no agregas cajas.</li></ul>
+          <p class="total">Total: <strong id="total">$0</strong> <small id="total-boxes"></small></p>
+
+          <h3>3. Tus datos de entrega</h3>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" autocomplete="name" maxlength="80" required>
+          <label for="address">Dirección</label>
+          <textarea id="address" name="address" autocomplete="street-address" maxlength="250" rows="2" required placeholder="Calle, número, colonia y referencias"></textarea>
+          <label for="phone">Teléfono (WhatsApp)</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="20" required placeholder="10 dígitos">
+
+          <p class="error" id="order-error" role="alert"></p>
+          <button type="submit" class="btn btn-block btn-wa" id="send-btn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8a11.6 11.6 0 0 1-4.6-4.1c-.4-.5-1-1.7-1-2.8s.6-1.7.8-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2Z"/></svg>
+            Enviar pedido por WhatsApp
+          </button>
+          <p class="hint small">Al enviar, guardamos tu pedido y se abre WhatsApp con el mensaje listo. Solo presiona <em>Enviar</em>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="logo logo-small" src="logo.jpeg" alt="Logo de La Empanadería de Andy">
+    <p><strong>La Empanadería de Andy</strong><br>Entregas gratis a domicilio todos los sábados.</p>
+    <p><a href="https://wa.me/526188070846" target="_blank" rel="noopener">📱 WhatsApp 618 807 0846</a></p>
+  </footer>
+
+  <dialog id="thanks">
+    <h3>¡Gracias por tu pedido! 🥟</h3>
+    <p id="thanks-text"></p>
+    <p class="hint">Si WhatsApp no se abrió, <a id="wa-link" target="_blank" rel="noopener">toca aquí</a>.</p>
+    <form method="dialog"><button class="btn">Cerrar</button></form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
